@@ -12,6 +12,7 @@ const App = () => {
     const data = await axios.get('https://reqres.in/api/users');
     console.log(data.data.data);
     setPeople(data.data.data);
+    console.log(process.env.YOUTUBE_KEY);
   };
 
   // useEffect(() => {
@@ -23,7 +24,9 @@ const App = () => {
       {/* Do not remove the main div */}
       <header className="nav">
         <h1>Blue Whales</h1>
-        <button onClick={getUsers}>Get User List</button>
+        <button className="btn" onClick={getUsers}>
+          Get User List
+        </button>
       </header>
       <table>
         <thead>
