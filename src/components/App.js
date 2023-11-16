@@ -38,20 +38,26 @@ const App = () => {
           </tr>
         </thead>
         <tbody>
-          {people.length === 0
-            ? 'No data found to display'
-            : people.map((person, index) => {
-                return (
-                  <tr key={index}>
-                    <td>{person.first_name}</td>
-                    <td>{person.last_name}</td>
-                    <td>{person.email}</td>
-                    <td>
-                      <img src={person.avatar} alt="" />
-                    </td>
-                  </tr>
-                );
-              })}
+          {people.length === 0 ? (
+            <tr>
+              <td>
+                <b>No data found to display.</b>
+              </td>
+            </tr>
+          ) : (
+            people.map((person, index) => {
+              return (
+                <tr key={index}>
+                  <td>{person.first_name}</td>
+                  <td>{person.last_name}</td>
+                  <td>{person.email}</td>
+                  <td>
+                    <img src={person.avatar} alt="" />
+                  </td>
+                </tr>
+              );
+            })
+          )}
         </tbody>
       </table>
     </div>
