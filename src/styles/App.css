@@ -1,1 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 0 2rem;
+}
+
+.nav button {
+  background-color: aqua;
+  border: none;
+  padding: 10px;
+  color: white;
+}
+table {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+thead {
+  background-color: #222;
+  color: white;
+  font-weight: bold;
+}
+
+th td {
+  border: none;
+}
